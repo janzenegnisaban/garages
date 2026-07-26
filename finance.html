@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Estimate monthly payments for Prime Auto Boutique Ph vehicles.">
+  <title>Finance | Prime Auto Boutique Ph</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <main class="page-main" data-chrome>
+    <div class="container page-hero">
+      <span class="eyebrow">Finance</span>
+      <h1>Low DP · Fast approval</h1>
+      <p>For planning only. Final terms depend on financing partner.</p>
+    </div>
+
+    <section class="section section--tight">
+      <div class="container split">
+        <form class="calc-card glass-strong form-stack" data-finance-calc>
+          <div class="field">
+            <label for="price">Vehicle price (₱)</label>
+            <input id="price" name="price" type="number" min="100000" step="10000" value="600000">
+          </div>
+          <div class="field range-field">
+            <label for="down">Down payment</label>
+            <input id="down" name="down" type="range" min="10" max="50" step="5" value="20">
+            <div class="range-meta"><span>10%</span><span data-down-label>20%</span><span>50%</span></div>
+          </div>
+          <div class="field range-field">
+            <label for="term">Term</label>
+            <input id="term" name="term" type="range" min="12" max="60" step="12" value="36">
+            <div class="range-meta"><span>12 mo</span><span data-term-label>36 mo</span><span>60 mo</span></div>
+          </div>
+          <div class="field">
+            <label for="rate">Est. annual interest (%)</label>
+            <input id="rate" name="rate" type="number" min="0" max="40" step="0.5" value="18">
+          </div>
+          <div class="calc-result">
+            <div class="calc-result__label">Estimated monthly</div>
+            <div class="calc-result__value" data-monthly>₱0/mo</div>
+            <p class="muted" data-down-amt style="margin-top:6px"></p>
+          </div>
+          <p class="muted">Illustrative estimate only.</p>
+        </form>
+
+        <div>
+          <div class="prose">
+            <h2>Financing inquiry</h2>
+          </div>
+          <form class="form-stack glass-strong panel" style="margin-top:20px" data-lead-form data-lead-subject="Finance inquiry — Prime Auto Boutique">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="Name" required autocomplete="name"></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" required autocomplete="tel"></div>
+            <div class="field"><label for="f-vehicle">Vehicle of interest</label><input id="f-vehicle" name="Vehicle" placeholder="e.g. 2023 Hyundai Creta"></div>
+            <div class="field"><label for="f-msg">Notes</label><textarea id="f-msg" name="Notes"></textarea></div>
+            <button type="submit" class="btn btn--primary btn--block">Submit Inquiry</button>
+            <a class="btn btn--secondary btn--block" href="https://m.me/primeautoboutiqueph" target="_blank" rel="noopener">Message Us</a>
+            <div class="form-success">Opening your email app…</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/inventory.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/finance.js"></script>
+</body>
+</html>

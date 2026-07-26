@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Browse Prime Auto Boutique Ph pre-owned inventory in Marikina.">
+  <title>Inventory | Prime Auto Boutique Ph</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <main class="page-main" data-chrome>
+    <div class="container page-hero">
+      <span class="eyebrow">Inventory</span>
+      <h1>Available vehicles</h1>
+    </div>
+
+    <section class="section section--tight">
+      <div class="container">
+        <form class="filters glass" data-srp-filters>
+          <div class="field" style="flex:2 1 180px">
+            <label for="q">Search</label>
+            <input id="q" name="q" type="search" placeholder="Make, model…">
+          </div>
+          <div class="field">
+            <label for="make">Make</label>
+            <select id="make" name="make"><option value="">All</option></select>
+          </div>
+          <div class="field">
+            <label for="body">Body</label>
+            <select id="body" name="body"><option value="">All</option></select>
+          </div>
+          <div class="field">
+            <label for="year">Year</label>
+            <select id="year" name="year"><option value="">All</option></select>
+          </div>
+          <div class="field">
+            <label for="price">Price</label>
+            <select id="price" name="price">
+              <option value="">Any</option>
+              <option value="under600">Under ₱600k</option>
+              <option value="600to800">₱600k – ₱800k</option>
+              <option value="over800">Over ₱800k</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sort">Sort</label>
+            <select id="sort" name="sort">
+              <option value="newest">Newest year</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="mileage">Lowest mileage</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="srp-toolbar">
+          <p class="srp-count" data-srp-count></p>
+          <a class="btn btn--ghost btn--sm" href="https://m.me/primeautoboutiqueph" target="_blank" rel="noopener">Ask About Availability</a>
+        </div>
+
+        <div class="vehicle-grid" data-srp-grid></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/inventory.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/srp.js"></script>
+</body>
+</html>

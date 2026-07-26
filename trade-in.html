@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Trade in or sell your car with Prime Auto Boutique Ph Marikina.">
+  <title>Trade-In | Prime Auto Boutique Ph</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <main class="page-main" data-chrome>
+    <div class="container page-hero">
+      <span class="eyebrow">Trade-In</span>
+      <h1>Value your car</h1>
+    </div>
+
+    <section class="section section--tight">
+      <div class="container split">
+        <form class="form-stack glass-strong panel" data-lead-form data-lead-subject="Trade-in / sell inquiry — Prime Auto Boutique">
+          <div class="field-row">
+            <div class="field"><label for="t-year">Year</label><input id="t-year" name="Year" type="number" min="1990" max="2027" required placeholder="2018"></div>
+            <div class="field"><label for="t-make">Make</label><input id="t-make" name="Make" required placeholder="Toyota"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="t-model">Model</label><input id="t-model" name="Model" required placeholder="Innova"></div>
+            <div class="field"><label for="t-mileage">Mileage (km)</label><input id="t-mileage" name="Mileage" type="number" min="0" placeholder="65000"></div>
+          </div>
+          <div class="field">
+            <label for="t-condition">Condition</label>
+            <select id="t-condition" name="Condition" required>
+              <option value="">Select…</option>
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Fair</option>
+              <option>Needs work</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="t-intent">I want to</label>
+            <select id="t-intent" name="Intent">
+              <option>Trade toward another car</option>
+              <option>Sell only</option>
+              <option>Consign</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="t-name">Your name</label><input id="t-name" name="Name" required autocomplete="name"></div>
+            <div class="field"><label for="t-phone">Phone</label><input id="t-phone" name="Phone" type="tel" required autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="t-notes">Notes</label><textarea id="t-notes" name="Notes"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--block">Submit Inquiry</button>
+          <div class="form-success">Opening your email app…</div>
+        </form>
+
+        <div class="prose">
+          <h2>How it works</h2>
+          <p><strong>1.</strong> Submit your vehicle details.</p>
+          <p><strong>2.</strong> We review and contact you.</p>
+          <p><strong>3.</strong> Inspection, then trade, sell, or consign.</p>
+          <div class="btn-group" style="margin-top:20px">
+            <a class="btn btn--secondary" href="https://m.me/primeautoboutiqueph" target="_blank" rel="noopener">Send Photos</a>
+            <a class="btn btn--ghost" href="inventory.html">Browse Inventory</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/inventory.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chrome.js"></script>
+</body>
+</html>

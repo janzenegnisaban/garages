@@ -1,0 +1,142 @@
+html {
+  color-scheme: light dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Prime Auto Boutique Ph — iOS 26 Liquid Glass design tokens */
+:root {
+  /* Brand — red / black / white from Facebook banner */
+  --brand-orange: #e10600;
+  --brand-orange-soft: #ff3b30;
+  --brand-blue: #1a1c20;
+  --brand-blue-deep: #0b0c0f;
+  --brand-k: #e10600;
+
+  /* Content layer */
+  --bg: #f2f3f7;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #e8eaf0;
+  --text: #0b0c0f;
+  --text-secondary: #5c6370;
+  --text-tertiary: #8b919c;
+  --border: rgba(15, 20, 30, 0.08);
+  --shadow: 0 8px 32px rgba(15, 20, 30, 0.08);
+  --shadow-lg: 0 24px 64px rgba(15, 20, 30, 0.14);
+
+  /* Glass UI layer */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -0.5px 0 rgba(0, 0, 0, 0.06);
+  --glass-blur: 28px;
+  --glass-saturate: 180%;
+
+  /* Radii — continuous large corners */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration: 320ms;
+  --duration-slow: 520ms;
+
+  /* Layout */
+  --nav-height: 64px;
+  --sticky-bar-height: 72px;
+  --max-width: 1120px;
+  --gutter: clamp(16px, 4.5vw, 28px);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* Semantic */
+  --cta: var(--brand-orange);
+  --cta-hover: #c10500;
+  --cta-text: #ffffff;
+  --link: var(--brand-orange);
+  --success: #1a9f5c;
+  --danger: #e13c3c;
+  --focus-ring: 0 0 0 3px rgba(30, 111, 217, 0.35);
+
+  /* Typography — Outfit (display) + DM Sans (UI), dealer-style clarity */
+  --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 2.5vw, 1.375rem);
+  --text-2xl: clamp(1.5rem, 3.5vw, 2rem);
+  --text-3xl: clamp(1.85rem, 5vw, 2.75rem);
+  --text-hero: clamp(2.25rem, 9vw, 4.25rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+  --tracking-tight: -0.025em;
+  --tracking-label: 0.08em;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0c10;
+  --bg-elevated: #16181f;
+  --bg-subtle: #1e2129;
+  --text: #f4f5f7;
+  --text-secondary: #a8adb8;
+  --text-tertiary: #6e7480;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
+
+  --glass-bg: rgba(28, 30, 38, 0.55);
+  --glass-bg-strong: rgba(28, 30, 38, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -0.5px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b0c10;
+    --bg-elevated: #16181f;
+    --bg-subtle: #1e2129;
+    --text: #f4f5f7;
+    --text-secondary: #a8adb8;
+    --text-tertiary: #6e7480;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
+
+    --glass-bg: rgba(28, 30, 38, 0.55);
+    --glass-bg-strong: rgba(28, 30, 38, 0.78);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --glass-specular: inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      inset 0 -0.5px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration: 0ms;
+    --duration-slow: 0ms;
+  }
+}
